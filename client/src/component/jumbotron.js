@@ -9,7 +9,7 @@ const ReactJumbotron = () => {
             <Jumbotron className="background-colour">
                 <h1 className="display-3">Welcome To The Ethereum Lottery</h1>
                 &emsp;
-                <p className="lead">This Lottery is run and managed by Steven Lillis 40211625</p>
+                <p className="lead">This Lottery is run and managed by Steven Lillis | 40211625</p>
                 &emsp;
                 <p className="lead">Currently, we have 10 entries, completing to win 11.47 Ether!</p>
                 &emsp;
