@@ -17,16 +17,16 @@ const ReactJumbotron = () => {
                 &emsp;
                 <p className="lead">
                 &emsp;
-                        <Button color="primary" id="toggler" style={{ marginBottom: '1rem' }}>
-                            Account Information
+                        <Button color="primary" id="toggler" style={{ marginBottom: '1rem', width: '200px', height: '60px', fontSize: '1.1rem'}}>
+                            ACCOUNT INFORMATION
                         </Button>
                         <UncontrolledCollapse toggler="#toggler">
                             <Card className="background-colour">
                                 <CardBody>
-                                   Account Holder: 0x5o475oi3ht384tn4t89n34t8
+                                   Current Account: 0x5o475oi3ht384tn4t89n34t8
                                 </CardBody>
                                 <CardBody>
-                                   Account Balance: 20 Ether
+                                   Current Account Balance: 20 Ether
                                 </CardBody>
                             </Card>
                         </UncontrolledCollapse>

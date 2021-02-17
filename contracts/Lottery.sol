@@ -1,5 +1,3 @@
-//TODO: Add Lottery Contract
-
 //"SPDX-License-Identifier: UNLICENSED"
 pragma solidity ^0.4.17;
 contract Lottery {
@@ -16,7 +14,7 @@ contract Lottery {
         // require is used for validations
         // msg.value is the amount of Ether (in Wei) that was sent by the player
         // "ether" automatically converts ether in wei
-        require(msg.value >= .01 ether);
+        require(msg.value > .01 ether);
         // Storing the player address
         players.push(msg.sender);
     }
@@ -31,6 +29,9 @@ contract Lottery {
     }
     // Picks the lottery winner, where only the contract owner can call it
     function pickWinner() public restrictedToOwner {
+        //Require the number of playerrs in the lottery to be greater than 1
+        require(players.length > 0);
+
         uint winnerIndex = getRandom() % players.length;
         // "this" is the pointer to the current contract instance
         // address(this) converts the contract reference to an address
