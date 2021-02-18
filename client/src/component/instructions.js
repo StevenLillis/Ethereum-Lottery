@@ -1,19 +1,31 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import React from 'react';
+import './instructions.css'
 
 const Instruction = () => {
     return (
         <VerticalTimeline>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                //contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#fff' }}
+                iconStyle={{ background: '#86bfee', color: '#fff'}}
+                icon={''}
             >
-                <h3 className="vertical-timeline-element-title">MetaMask</h3>
+                <h3 className="vertical-timeline-element-title weight">MetaMask</h3>
                 <p>
-                    Please Ensure That You Have MetaMask Installed and Have An Account Created
+                    Please Ensure That You Have <a href="https://metamask.io/download.html" target="_blank">MetaMask</a> Installed and Have An Account Created
+                </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: '#86bfee', color: '#fff' }}
+                iconStyle={{ background: '#86bfee', color: '#fff'}}
+                icon={''}
+            >
+                <h3 className="vertical-timeline-element-title weight">MetaMask Network</h3>
+                <p>
+                    Please Ensure That You Are Connected To The 'Rinkeby Test Network'
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
