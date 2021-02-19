@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import Dice from '../assets/dice.svg';
+import Wheel from '../assets/wheel.svg';
 import './enter.css';
 import { Container, Col, Button } from 'reactstrap';
 
@@ -13,7 +14,7 @@ const Enter = () => {
                     <CardSubtitle tag="h3" className="mb-2 text-muted">Want To Try Your Luck?</CardSubtitle>
                 </CardBody>
                 <div style={{ textAlign: 'center' }}>
-                    <img width="10%" src={Dice} alt="Card image cap" />
+                    <img width="10%" src={Wheel} alt="Card image cap" />
                 </div>
                 <CardBody>
                     <CardText tag="h4">Amount of Ether (Minimum 0.01 Ether)</CardText>

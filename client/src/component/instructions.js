@@ -2,6 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import React from 'react';
 import './instructions.css'
+import { MdFilter1,MdFilter2,MdFilter3,MdFilter4,MdFilter5,MdFilter6,MdFilter7,MdFilter8,MdNavigateBefore,MdNavigateNext } from "react-icons/md";
 
 const Instruction = () => {
     return (
@@ -10,9 +11,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#86bfee', color: '#000' }}
                 iconStyle={{ background: '#86bfee', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateBefore />}
             >
-                <h3 className="vertical-timeline-element-title weight">MetaMask</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter1 /> MetaMask</h3>
                 <p>
                     Please Ensure That You Have <a href="https://metamask.io/download.html" target="_blank">MetaMask</a> Installed and Have An Account Created
                 </p>
@@ -21,9 +22,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFCCCB', color: '#000' }}
                 iconStyle={{ background: '#FFCCCB', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateNext />}
             >
-                <h3 className="vertical-timeline-element-title weight">MetaMask Network</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter2 /> MetaMask Network</h3>
                 <p>
                     Please Ensure That You Are Connected To The <a href="https://www.rinkeby.io/#stats" target="_blank"> 'Rinkeby Test Network'</a>
                 </p>
@@ -32,9 +33,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#86bfee', color: '#000' }}
                 iconStyle={{ background: '#86bfee', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateBefore />}
             >
-                <h3 className="vertical-timeline-element-title weight">Entering The Lottery</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter3 /> Entering The Lottery</h3>
                 <p>
                     Participate In The Lottery By Entering An Amount Creater Than 0.01 Ether
                 </p>
@@ -43,9 +44,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFCCCB', color: '#000' }}
                 iconStyle={{ background: '#FFCCCB', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateNext />}
             >
-                <h3 className="vertical-timeline-element-title weight">Enter Limit</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter4 /> Enter Limit</h3>
                 <p>
                     Players May Enter The Lottery <br /> As A Many Times As They Wish
                 </p>
@@ -54,9 +55,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#86bfee', color: '#000' }}
                 iconStyle={{ background: '#86bfee', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateBefore />}
             >
-                <h3 className="vertical-timeline-element-title weight">Selecting A Winner</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter5 /> Selecting A Winner</h3>
                 <p>
                     Once A Suitable Number Of People Have Entered, The Lottery Will Be Drawn <br /> <u>(Only By The Owner)</u>
                 </p>
@@ -65,9 +66,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFCCCB', color: '#000' }}
                 iconStyle={{ background: '#FFCCCB', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateNext />}
             >
-                <h3 className="vertical-timeline-element-title weight">Winner Selected</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter6 /> Winner Selected</h3>
                 <p>
                     The Winner Will Recieve The Entire Lottery Pot Once The Lottery Has Been Drawn
                 </p>
@@ -76,9 +77,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#86bfee', color: '#000' }}
                 iconStyle={{ background: '#86bfee', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateBefore />}
             >
-                <h3 className="vertical-timeline-element-title weight">Lottery Reset</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter7 /> Lottery Reset</h3>
                 <p>
                     Once The Winner Has Been Selected, <br />  A New Lottery Will Begin <br /> Allowing Players To Play Again
                 </p>
@@ -87,9 +88,9 @@ const Instruction = () => {
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFCCCB', color: '#000' }}
                 iconStyle={{ background: '#FFCCCB', color: '#fff'}}
-                icon={''}
+                icon={<MdNavigateNext />}
             >
-                <h3 className="vertical-timeline-element-title weight">Best Of Luck</h3>
+                <h3 className="vertical-timeline-element-title weight"> <MdFilter8 /> Best Of Luck</h3>
                 <p>
                     Gamble Aware, Be Safe, <br /> <a href="https://www.begambleaware.org/" target="_blank"> When The Fun Stops. Stop. </a>
                 </p>

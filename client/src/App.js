@@ -7,6 +7,7 @@ import Enter from './component/enter';
 import Jumbotron from './component/jumbotron';
 import Manage from './component/manage';
 import TabBar from './component/tabBar';
+import Footer from './component/footer';
 
 class App extends Component {
   render() {
@@ -23,6 +24,11 @@ class App extends Component {
             <Manage />
           </Col>
         </Container> */}
+         <br />
+         <br />
+         <Footer>
+          <Footer />
+         </Footer>
       </div>
     )
   }

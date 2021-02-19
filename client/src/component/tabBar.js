@@ -37,21 +37,23 @@ const TabBar = () => {
         </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
-      &emsp;
-      &emsp;
+      <br />
         <TabPane tabId="1">
         <Container>
           <Col>
             <Enter />
           </Col>
-      &emsp;
+          </Container>
+        <Container>
           <Col>
             <Manage />
           </Col>
         </Container>
+        <br />
         </TabPane>
         <TabPane tabId="2">
         <Instruction />
+        <br />
         </TabPane>
       </TabContent>
     </div>
