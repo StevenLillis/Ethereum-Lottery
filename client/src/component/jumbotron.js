@@ -17,7 +17,7 @@ const ReactJumbotron = () => {
                 <br />
                 <p className="lead">
                 &emsp;
-                        <Button color="primary" id="toggler" style={{ marginBottom: '1rem', width: '220px', height: '60px', fontSize: '1.1rem'}}>
+                        <Button color="primary" id="toggler" style={{ marginBottom: '1rem', width: '210px', height: '60px', fontSize: '1.1rem'}}>
                             ACCOUNT INFORMATION
                         </Button>
                         <UncontrolledCollapse toggler="#toggler">
