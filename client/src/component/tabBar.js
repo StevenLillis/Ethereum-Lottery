@@ -50,9 +50,11 @@ const TabBar = () => {
           </Col>
         </Container>
         <br />
+        <br />
         </TabPane>
         <TabPane tabId="2">
         <Instruction />
+        <br />
         <br />
         </TabPane>
       </TabContent>
