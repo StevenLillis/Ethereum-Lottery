@@ -28,9 +28,9 @@ const Enter = () => {
                             onChange=""
                         />
                         <br />
-                        <button>
+                        <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem'}}>
                             Enter Lottery
-                        </button>
+                        </Button>
                     </div>
                     {/* <Container>
                             <Col sm="12" md={{ size: 6, offset: 3 }}>

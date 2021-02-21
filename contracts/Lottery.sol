@@ -4,7 +4,7 @@ contract Lottery {
     address public owner;
     address[] public players;
     
-    function SmartLottery() public {
+    function Lottery() public {
         // Making sure the owner is the address that deployed the contract
         owner = msg.sender;
     }
