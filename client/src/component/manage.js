@@ -19,6 +19,10 @@ const Manage = () => {
                 <CardBody>
                     <CardText tag="h4">This Section Is Specific To The Manager Of This Lottery.</CardText>
                     <CardText tag="h4">Any Individual Other Then The Manager Would Fail To Pick.</CardText>
+                    <br />
+                    <button>
+                        Pick Winner
+                    </button>
                 </CardBody>
             </Card>
         </div>

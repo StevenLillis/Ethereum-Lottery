@@ -10,7 +10,7 @@ const Enter = () => {
         <div>
             <Card className="background-shadow">
                 <CardBody>
-                    <CardTitle tag="h1">Enter The Lottery</CardTitle>
+                    <CardTitle tag="h1">Enter The Ethereum Lottery</CardTitle>
                     <CardSubtitle tag="h3" className="mb-2 text-muted">Want To Try Your Luck?</CardSubtitle>
                 </CardBody>
                 <div style={{ textAlign: 'center' }}>
@@ -27,6 +27,10 @@ const Enter = () => {
                             placeholder="Enter Ether Amount"
                             onChange=""
                         />
+                        <br />
+                        <button>
+                            Enter Lottery
+                        </button>
                     </div>
                     {/* <Container>
                             <Col sm="12" md={{ size: 6, offset: 3 }}>
