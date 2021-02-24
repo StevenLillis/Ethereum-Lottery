@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import Dice from '../assets/dice.svg';
+import '../index.css';
 import Wheel from '../assets/wheel.svg';
-import './enter.css';
-import { Container, Col, Button } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+
+// Enter Card Component
 
 const Enter = () => {
     return (
@@ -28,22 +28,10 @@ const Enter = () => {
                             onChange=""
                         />
                         <br />
-                        <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem'}}>
+                        <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem' }}>
                             Enter Lottery
                         </Button>
                     </div>
-                    {/* <Container>
-                            <Col sm="12" md={{ size: 6, offset: 3 }}>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    //NEED TO REMOVE VALUE TO START TYPING
-                                    value=""
-                                    placeholder="Enter the ether amount"
-                                    onChange=""
-                                />
-                            </Col>
-                    </Container> */}
                 </CardBody>
             </Card>
         </div>

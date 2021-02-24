@@ -14,8 +14,71 @@ code {
 }
 
 * { 
-  /* font-family: 'Montserrat', sans-serif; */
-  /* font-family: 'Kalam', cursive; */
   font-family: 'Spartan';
   font-variant: small-caps;
 }
+
+/* TabBar */
+
+.navlink-style { 
+  font-size: 25px !important;
+  font-weight: bold !important;
+}
+
+/* Jumbotron */
+
+.background-colour { 
+  background-color: #8FC1E3 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+p { 
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+h2 { 
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+
+/* Instructions */
+
+.weight { 
+  font-weight: bold !important;
+  font-style: initial !important;
+}
+
+/* Footer  */
+
+.footer{
+  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  padding: 2rem;
+  background-color: #86bfee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+/* Enter  */
+
+.background-shadow { 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  /* background-color: #86bfee !important; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h4, h3, input { 
+  font-weight: bold !important;
+}
+
+
+
+
+
+

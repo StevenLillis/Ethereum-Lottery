@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import { Container } from 'reactstrap';
+import '../index.css';
 import classnames from 'classnames';
-import Manage from '../component/manage';
-import Enter from '../component/enter';
-import Instruction from '../component/instructions'
-import './tabBar.css';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Container, Col } from 'reactstrap';
+
+import Instruction from './Instructions.js'
+import Manage from './Manage.js';
+import Enter from './Enter.js';
+
+//TabBar Component - Incorporates Components: Instruction, Manage & Enter
 
 const TabBar = () => {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
-    if(activeTab !== tab) setActiveTab(tab);
+    if (activeTab !== tab) setActiveTab(tab);
   }
 
   return (
@@ -28,7 +30,7 @@ const TabBar = () => {
         </NavItem>
         <NavItem>
           <NavLink
-            className={classnames({ active: activeTab === '2'})}
+            className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
             className="navlink-style"
           >
@@ -37,25 +39,25 @@ const TabBar = () => {
         </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
-      <br />
+        <br />
         <TabPane tabId="1">
-        <Container>
-          <Col>
-            <Enter />
-          </Col>
+          <Container>
+            <Col>
+              <Enter />
+            </Col>
           </Container>
-        <Container>
-          <Col>
-            <Manage />
-          </Col>
-        </Container>
-        <br />
-        <br />
+          <Container>
+            <Col>
+              <Manage />
+            </Col>
+          </Container>
+          <br />
+          <br />
         </TabPane>
         <TabPane tabId="2">
-        <Instruction />
-        <br />
-        <br />
+          <Instruction />
+          <br />
+          <br />
         </TabPane>
       </TabContent>
     </div>

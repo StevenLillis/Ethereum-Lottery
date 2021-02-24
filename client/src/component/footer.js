@@ -1,8 +1,10 @@
-import React from 'react'; 
-import './footer.css'
-import {MdFingerprint} from 'react-icons/md'
+import React from 'react';
+import '../index.css';
+import { MdFingerprint } from 'react-icons/md';
 
-const Footer = () => { 
+//Simple Footer Component
+
+const Footer = () => {
     return (
         <div className="container-fulid">
             <div className="footer">

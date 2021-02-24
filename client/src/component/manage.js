@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import { Container, Col } from 'reactstrap';
+import '../index.css';
 import Ethereum from '../assets/ethereum.svg';
-import { Button } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+
+//Manager Component
 
 const Manage = () => {
     return (
@@ -19,10 +20,10 @@ const Manage = () => {
                 <CardBody>
                     <CardText tag="h4">This Section Is Specific To The Manager Of This Lottery.</CardText>
                     <CardText tag="h4">Any Individual Other Then The Manager Would Fail To Pick.</CardText>
-                    <br />
-                    <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem'}}>
-                            Pick Winner
-                        </Button>
+                        <br />
+                    <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem' }}>
+                        Pick Winner
+                    </Button>
                 </CardBody>
             </Card>
         </div>
