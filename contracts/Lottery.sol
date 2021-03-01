@@ -38,7 +38,7 @@ contract Lottery {
         // address(this).balance is the total amount of money available in the contract
         uint balance = address(this).balance;
         // transfer will take some amount of money in the contract and send it to the specified address
-        players[winnerIndex].transfer(balance);
+        players[winnerIndex].transfer(this.balance);
         // Empty the players list to start a new lottery without the need to redeploy the contract
         // address[](0) means a dynamic array with initial size of 0.
         // If you start it like address[](2), the array will start as [0x0000.., 0x0000..]
