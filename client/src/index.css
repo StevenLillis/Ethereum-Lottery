@@ -77,6 +77,11 @@ h1, h4, h3, input {
   font-weight: bold !important;
 }
 
+.button-weight { 
+  color: white !important;
+  font-weight: bold !important;
+}
+
 
 
 

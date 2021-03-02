@@ -5,7 +5,7 @@ import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'react
 
 // Enter Card Component
 
-const Enter = () => {
+const Enter = ({loading, onSubmit, value, onChange }) => {
     return (
         <div>
             <Card className="background-shadow">
@@ -23,14 +23,30 @@ const Enter = () => {
                         <input
                             type="text"
                             className="form-control"
-                            value=""
+                            value={value}
                             placeholder="Enter Ether Amount"
-                            onChange=""
+                            onChange={onChange}
                         />
-                        <br />
-                        <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem' }}>
-                            Enter Lottery
-                        </Button>
+                        <div>
+                        {loading ? (
+                        <div>
+                        <button
+                            className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight"
+                            disabled
+                        >
+                        <i className="fa fa-refresh fa-spin mr-3"> </i>
+                            Entering...
+                        </button>{' '}
+                        </div>
+                            ) : (
+                            <button
+                            onClick={onSubmit}
+                            className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight"
+                            >
+                            Enter the Lottery!
+                            </button>
+                                )}
+                            </div> 
                     </div>
                 </CardBody>
             </Card>

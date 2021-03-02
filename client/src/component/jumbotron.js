@@ -10,7 +10,7 @@ import web3 from '../web3.js';
 
 // axios orp
 
-const ReactJumbotron = ({owner, players, balance}) => {
+const ReactJumbotron = ({owner, players, balance, ethaddress}) => {
 
     // componentDidMount() { 
     //     // Make a request for a user with a given ID
@@ -32,7 +32,7 @@ const ReactJumbotron = ({owner, players, balance}) => {
             <h1 className="display-3">Welcome To The Ethereum Lottery</h1>
             <img src={Logo} alt="My logo" />
             <br />
-            <h2 className="lead">This Lottery is run and managed by {owner} </h2>
+            <h2 className="lead">This Lottery is run and managed by <a href="https://rinkeby.etherscan.io/address/0x469e15f2c3c5481b8b10fc4f7644069f5c6cd2cf" target="_blank">{owner}</a> </h2>
             <br />
             <h2 className="lead">Currently, we have {players.length} entries, completing to win {web3.utils.fromWei(balance, 'ether')} Ether!</h2>
             <br />
@@ -46,10 +46,10 @@ const ReactJumbotron = ({owner, players, balance}) => {
                 <UncontrolledCollapse toggler="#toggler">
                     <Card className="background-colour">
                         <CardBody>
-                            Current Account: [Account Address]
+                            Current Account: {ethaddress}
                                 </CardBody>
                         <CardBody>
-                            Current Account Balance: [Account Balance] Ether
+                            Current Account Balance: [Amount] Ether
                                 </CardBody>
                     </Card>
                 </UncontrolledCollapse>
