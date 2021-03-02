@@ -57,7 +57,7 @@ class App extends Component {
   
         const accounts = await web3.eth.getAccounts();
   
-        await lottery.methods.enter().send({
+        await lottery.methods.join().send({
           //for the current version of web3, we do have to mention from property while sending transaction
           from: accounts[0],
           value: web3.utils.toWei(this.state.value, 'ether')
@@ -145,6 +145,7 @@ class App extends Component {
       errorAlert = (
         <div
           className="alert alert-danger mt-4 z-depth-2 text-center animated fadeIn"
+          style={{ fontSize: '20px' }}
           role="alert"
         >
           <strong>Error: </strong>
