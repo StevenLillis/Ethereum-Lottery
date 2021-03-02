@@ -181,8 +181,8 @@ class App extends Component {
           value={this.state.value}
           loading={this.state.loadingEnter}
           onChange={event => this.setState({ value: event.target.value })}
-          // loading={this.state.loadingPick}
-          // pickWinner={this.pickWinner}
+          loadingPick={this.state.loadingPick}
+          pickWinner={this.pickWinner}
           />
             <br />
             <br />

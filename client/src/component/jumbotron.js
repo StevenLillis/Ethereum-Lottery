@@ -48,9 +48,9 @@ const ReactJumbotron = ({owner, players, balance, ethaddress}) => {
                         <CardBody>
                             Current Account: {ethaddress}
                                 </CardBody>
-                        <CardBody>
+                        {/* <CardBody>
                             Current Account Balance: [Amount] Ether
-                                </CardBody>
+                                </CardBody> */}
                     </Card>
                 </UncontrolledCollapse>
             </p>

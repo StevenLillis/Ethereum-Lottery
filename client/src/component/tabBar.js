@@ -9,7 +9,7 @@ import Enter from './Enter.js';
 
 //TabBar Component - Incorporates Components: Instruction, Manage & Enter
 
-const TabBar = ({onSubmit, value, loading, onChange, }) => {
+const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) => {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {
@@ -54,8 +54,8 @@ const TabBar = ({onSubmit, value, loading, onChange, }) => {
           <Container>
             <Col>
               <Manage 
-              // loading={this.state.loadingPick}
-              // pickWinner={this.pickWinner}
+              loading={loadingPick}
+              pickWinner={pickWinner}
               />
             </Col>
           </Container>

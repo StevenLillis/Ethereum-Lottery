@@ -5,7 +5,7 @@ import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'react
 
 //Manager Component
 
-const Manage = () => {
+const Manage = ({loading, pickWinner}) => {
     return (
         <div>
             <Card className="background-shadow">
@@ -20,10 +20,22 @@ const Manage = () => {
                 <CardBody>
                     <CardText tag="h4">This Section Is Specific To The Manager Of This Lottery.</CardText>
                     <CardText tag="h4">Any Individual Other Then The Manager Would Fail To Pick.</CardText>
-                        <br />
-                    <Button tag="p" color="primary" style={{ marginBottom: '1rem', width: '220px', height: '40px', fontSize: '0.9rem' }}>
-                        Pick Winner
-                    </Button>
+                        {loading ? (
+                            <div>
+                                <button
+                                    className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight "
+                                    disabled
+                                >
+                                    Picking...
+                                </button>{' '}
+                            </div> ) : (
+                                <button
+                                    onClick={pickWinner}
+                                    className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight "
+                                >
+                                    Pick a Winner!
+                                </button>
+                                    )}
                 </CardBody>
             </Card>
         </div>

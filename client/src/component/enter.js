@@ -33,7 +33,6 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight"
                             disabled
                         >
-                        <i className="fa fa-refresh fa-spin mr-3"> </i>
                             Entering...
                         </button>{' '}
                         </div>
