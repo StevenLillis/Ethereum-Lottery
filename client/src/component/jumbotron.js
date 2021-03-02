@@ -10,7 +10,7 @@ import web3 from '../web3.js';
 
 // axios orp
 
-const ReactJumbotron = ({owner, players, balance}) => {
+const ReactJumbotron = ({owner, players, balance, playerAddress, playerAccountBalance}) => {
 
     // componentDidMount() { 
     //     // Make a request for a user with a given ID
@@ -46,10 +46,10 @@ const ReactJumbotron = ({owner, players, balance}) => {
                 <UncontrolledCollapse toggler="#toggler">
                     <Card className="background-colour">
                         <CardBody>
-                            Current Account: [Account Address]
+                            Current Account: {playerAddress}
                                 </CardBody>
                         <CardBody>
-                            Current Account Balance: [Account Balance] Ether
+                            Current Account Balance: {playerAccountBalance} Ether
                                 </CardBody>
                     </Card>
                 </UncontrolledCollapse>

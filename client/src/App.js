@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Jumbotron from './component/Jumbotron.js';
-import TabBar from './component/TabBar.js';
-import Footer from './component/Footer.js';
+import Jumbotron from './component/jumbotron.js';
+import TabBar from './component/tabBar.js';
+import Footer from './component/footer.js';
 
 import axios from 'axios';
 import lottery from './lottery.js';
-import web3 from './web3';
+import web3 from './web3'; 
+import Web3 from 'web3'; 
 
 class App extends Component {
 
@@ -35,8 +36,16 @@ class App extends Component {
       //from metamask has a default account (which is the first account we are logged into @Metamask)
       const players = await lottery.methods.getPlayers().call();
       const balance = await web3.eth.getBalance(lottery.options.address);
-
-      this.setState({ owner, players, balance });
+      let playerAddress;
+      let playerAccountBalance;
+      if (window.ethereum) { // using metamask
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        playerAddress = accounts[0];
+        const accountBalance = await window.ethereum.request({ method: 'eth_getBalance', params: [playerAddress]});
+        playerAccountBalance = web3.utils.fromWei(accountBalance, "ether")
+      }
+    
+      this.setState({ owner, players, balance, playerAddress, playerAccountBalance });
     } 
 
 
@@ -47,6 +56,8 @@ class App extends Component {
         owner={this.state.owner}
         players={this.state.players}
         balance={this.state.balance}
+        playerAddress={this.state.playerAddress}
+        playerAccountBalance={this.state.playerAccountBalance}
          />
           <TabBar />
             <br />

@@ -1,6 +1,7 @@
 import web3 from './web3';
 
-const address = '0x469e15f2c3c5481b8b10fc4f7644069f5c6cd2cf'
+// const address = '0x469e15f2c3c5481b8b10fc4f7644069f5c6cd2cf'
+const address = '0xED0AD0d3f055D67face827811b915CfF3647786C' //kovan
 const abi = [
         {
             "constant": false,
