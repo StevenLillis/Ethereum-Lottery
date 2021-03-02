@@ -8,13 +8,13 @@ contract Lottery {
         // Making sure the owner is the address that deployed the contract
         owner = msg.sender;
     }
-    // Adds a player in the lottery, where the player needs to pay 0.01 ether to join
+    // Adds a player in the lottery, where the player needs to pay 0.01 or more ether to join
     // Function is payable because we want that users pay to join the lottery
     function join() public payable {
         // require is used for validations
         // msg.value is the amount of Ether (in Wei) that was sent by the player
         // "ether" automatically converts ether in wei
-        require(msg.value > .01 ether);
+        require(msg.value >= .01 ether);
         // Storing the player address
         players.push(msg.sender);
     }
@@ -25,7 +25,7 @@ contract Lottery {
         // difficulty is a number that indicates how challenging is to solve the current block
         // now is the current time
         // uint will convert hash number tom uint
-        return uint(keccak256(block.difficulty, block.timestamp, players));
+        return uint(keccak256(block.difficulty, now, players));
     }
     // Picks the lottery winner, where only the contract owner can call it
     function pickWinner() public restrictedToOwner {

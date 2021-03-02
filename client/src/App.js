@@ -46,12 +46,12 @@ class App extends Component {
   
       this.setState({
         errorMessage: '',
-        sucessMessage: '',
+        successMessage: '',
         loadingEnter: true
       });
   
       try {
-        if (parseFloat(this.state.value) < 0.011) {
+        if (parseFloat(this.state.value) < 0.01) {
           throw Error('Please enter a greater than the specified minimum (0.1 Ether)');
         }
   
@@ -154,14 +154,14 @@ class App extends Component {
       );
     }
 
-    if (this.state.sucessMessage) {
+    if (this.state.successMessage) {
       successAlert = (
         <div
           className="alert alert-success mt-4 z-depth-2 clearfix mb-5 text-center animated fadeIn"
           style={{ fontSize: '20px' }}
           role="alert"
         >
-          {this.state.sucessMessage}
+          {this.state.successMessage}
         </div>
       );
     }
@@ -181,6 +181,8 @@ class App extends Component {
           value={this.state.value}
           loading={this.state.loadingEnter}
           onChange={event => this.setState({ value: event.target.value })}
+          // loading={this.state.loadingPick}
+          // pickWinner={this.pickWinner}
           />
             <br />
             <br />

@@ -27,7 +27,6 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             placeholder="Enter Ether Amount"
                             onChange={onChange}
                         />
-                        <div>
                         {loading ? (
                         <div>
                         <button
@@ -45,8 +44,7 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             >
                             Enter the Lottery!
                             </button>
-                                )}
-                            </div> 
+                        )}
                     </div>
                 </CardBody>
             </Card>
