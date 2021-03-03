@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Jumbotron from './component/Jumbotron.js';
-import TabBar from './component/TabBar.js';
-import Footer from './component/Footer.js';
+import Jumbotron from './component/jumbotron.js';
+import TabBar from './component/tabBar.js';
+import Footer from './component/footer.js';
 
 import lottery from './lottery.js';
 import web3 from './web3';
@@ -145,7 +145,7 @@ class App extends Component {
       errorAlert = (
         <div
           className="alert alert-danger mt-4 z-depth-2 text-center animated fadeIn"
-          style={{ fontSize: '20px' }}
+          style={{ fontSize: '20px', fontWeight: 'bold' }}
           role="alert"
         >
           <strong>Error: </strong>
@@ -158,7 +158,7 @@ class App extends Component {
       successAlert = (
         <div
           className="alert alert-success mt-4 z-depth-2 clearfix mb-5 text-center animated fadeIn"
-          style={{ fontSize: '20px' }}
+          style={{ fontSize: '20px', fontWeight: 'bold' }}
           role="alert"
         >
           {this.state.successMessage}

@@ -3,9 +3,9 @@ import '../index.css';
 import classnames from 'classnames';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Container, Col } from 'reactstrap';
 
-import Instruction from './Instructions.js'
-import Manage from './Manage.js';
-import Enter from './Enter.js';
+import Instruction from './instructions.js'
+import Manage from './manage.js';
+import Enter from './enter.js';
 
 //TabBar Component - Incorporates Components: Instruction, Manage & Enter
 
