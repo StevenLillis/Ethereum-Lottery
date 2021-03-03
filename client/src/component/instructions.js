@@ -39,7 +39,7 @@ const Instruction = () => {
             >
                 <h3 className="vertical-timeline-element-title weight"> <MdFilter3 /> Entering The Lottery</h3>
                 <p>
-                    Participate in the Lottery by entering an amount creater than 0.01 Ether
+                    Participate in the Lottery by entering an amount greater than or equal to 0.01 Ether
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
