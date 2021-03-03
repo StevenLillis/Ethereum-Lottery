@@ -52,7 +52,7 @@ class App extends Component {
   
       try {
         if (parseFloat(this.state.value) < 0.01) {
-          throw Error('Please enter a greater than the specified minimum (0.1 Ether)');
+          throw Error('Please enter a greater than the specified minimum (0.01 Ether)');
         }
   
         const accounts = await web3.eth.getAccounts();
@@ -114,7 +114,7 @@ class App extends Component {
           'No "from" address specified in neither the given options, nor the default options.'
         ) {
           err.message =
-            'Metamask (operating over Rinkeby n/w) is required to create campaign! Please check if you are signed into metamask.';
+            'Metamask (operating over Rinkeby n/w) is required! Please check if you are signed into metamask.';
         }
         this.setState({ errorMessage: err.message, loadingPick: false });
       }
