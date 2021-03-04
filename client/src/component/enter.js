@@ -24,9 +24,10 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             type="text"
                             className="form-control"
                             value={value}
-                            placeholder="Enter Ether Amount"
+                            placeholder="Enter ether amount"
                             onChange={onChange}
                         />
+                        {/* Conditional Rendering Based on the value of the loading prop */}
                         {loading ? (
                         <div>
                         <button

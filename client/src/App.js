@@ -15,7 +15,8 @@ class App extends Component {
     players: [],
     balance: '',
     value: '',
-    ethaddress:'',
+    ethaddress: '',
+    ethbalance: '',
     loadingEnter: false,
     loadingPick: false,
     errorMessage: '',
@@ -31,18 +32,23 @@ class App extends Component {
       }
 
       const owner = await lottery.methods.owner().call();
-      //we don't need configure call (putting the from property) as the provider that we hijacked
-      //from metamask has a default account (which is the first account we are logged into @Metamask)
       const players = await lottery.methods.getPlayers().call();
       const balance = await web3.eth.getBalance(lottery.options.address);
-      const ethaddress = await web3.eth.getAccounts(console.log);
+      const ethaddress = await web3.eth.getAccounts();
+      const ethbalance = await web3.eth.getBalance(ethaddress.toString(), function(err, result) {
+        if (err) {
+          console.log(err)
+        } else {
+          web3.utils.fromWei(result, "ether");
+        }
+      });
 
-      this.setState({ owner, players, balance, ethaddress });
+      this.setState({ owner, players, balance, ethaddress, ethbalance });
     } 
 
     //Sumbit Function - Allows participents to enter into the Lottery
     onSubmit = async event => {
-      event.preventDefault(); //making sure that the form doesn't attemp to submit itself in a classic html way
+      event.preventDefault();
   
       this.setState({
         errorMessage: '',
@@ -58,13 +64,12 @@ class App extends Component {
         const accounts = await web3.eth.getAccounts();
   
         await lottery.methods.join().send({
-          //for the current version of web3, we do have to mention from property while sending transaction
           from: accounts[0],
           value: web3.utils.toWei(this.state.value, 'ether')
         });
   
         this.setState({
-          successMessage: "Cheers! You've successfully entered into the lottery",
+          successMessage: "Cheers! You've been successfully entered into the lottery",
           loadingEnter: false,
           players: await lottery.methods.getPlayers().call(),
           balance: await web3.eth.getBalance(lottery.options.address)
@@ -77,7 +82,10 @@ class App extends Component {
           err.message =
             'Metamask (operating over Rinkeby n/w) is required! Please check if you are signed into Metamask.';
         }
-        this.setState({ errorMessage: err.message, loadingEnter: false });
+        this.setState({ 
+          errorMessage: err.message, 
+          loadingEnter: false 
+        });
       }
     };
 
@@ -116,7 +124,10 @@ class App extends Component {
           err.message =
             'Metamask (operating over Rinkeby n/w) is required! Please check if you are signed into metamask.';
         }
-        this.setState({ errorMessage: err.message, loadingPick: false });
+        this.setState({ 
+          errorMessage: err.message, 
+          loadingPick: false 
+        });
       }
     };
     
@@ -173,6 +184,7 @@ class App extends Component {
         players={this.state.players}
         balance={this.state.balance}
         ethaddress={this.state.ethaddress}
+        ethbalance={this.state.ethbalance}
          />
          {errorAlert} {successAlert} {networkError}
          <br />

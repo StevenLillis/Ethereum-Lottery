@@ -8,24 +8,7 @@ import web3 from '../web3.js';
 
 //Jumbotron Component
 
-// axios orp
-
-const ReactJumbotron = ({owner, players, balance, ethaddress}) => {
-
-    // componentDidMount() { 
-    //     // Make a request for a user with a given ID
-    // axios.get('https://api-rinkeby.etherscan.io/api?module=account&action=balance&address=0x469e15f2c3c5481b8b10fc4f7644069f5c6cd2cf&tag=latest&apikey=URHX59UVIJNEDWBITMYYD869HJ1P2PRMIT')
-    // .then(function (response) {
-    // // handle success
-    // console.log(response);
-    // })
-    // .catch(function (error) {
-    // // handle error
-    // console.log(error);
-    // })
-    // .then(function () {
-    // // always executed
-    // });
+const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
 
     return (
         <Jumbotron className="background-colour">
@@ -47,10 +30,10 @@ const ReactJumbotron = ({owner, players, balance, ethaddress}) => {
                     <Card className="background-colour">
                         <CardBody>
                             Current Account: {ethaddress}
-                                </CardBody>
-                        {/* <CardBody>
-                            Current Account Balance: [Amount] Ether
-                                </CardBody> */}
+                        </CardBody>
+                        <CardBody>
+                            Current Account Balance: {parseFloat(web3.utils.fromWei(ethbalance, "ether")).toFixed(2)} Ether
+                        </CardBody>
                     </Card>
                 </UncontrolledCollapse>
             </p>
