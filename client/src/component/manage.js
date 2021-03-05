@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 import Ethereum from '../assets/ethereum.svg';
-import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import { Spinner } from 'reactstrap';
 
 //Manager Component

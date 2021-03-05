@@ -3,7 +3,6 @@ import '../index.css';
 import Logo from '../assets/logo.png';
 import { Jumbotron, Button } from 'reactstrap';
 import { UncontrolledCollapse, CardBody, Card } from 'reactstrap';
-import axios from 'axios';
 import web3 from '../web3.js';
 
 //Jumbotron Component
