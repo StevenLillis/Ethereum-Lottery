@@ -35,6 +35,12 @@ class App extends Component {
       const players = await lottery.methods.getPlayers().call();
       const balance = await web3.eth.getBalance(lottery.options.address);
       const ethaddress = await web3.eth.getAccounts();
+      if(ethaddress.length == 0) { 
+        ethaddress.push("1234567891234567891234567891234567891234");
+        this.setState({
+          errorMessage: 'Error: Please sign in through Metamask'
+        });
+      }
       const ethbalance = await web3.eth.getBalance(ethaddress.toString(), function(err, result) {
         if (err) {
           console.log(err)
