@@ -12,7 +12,7 @@ const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
     return (
         <Jumbotron className="background-colour">
             <h1 className="display-3">Welcome To The Ethereum Lottery</h1>
-            <img src={Logo} alt="My logo" />
+            <img src={Logo} alt="My logo" className="rotate" />
             <br />
             <h2 className="lead">This Lottery is run and managed by <a href="https://rinkeby.etherscan.io/address/0x01f7b3f5ef19d1b2f87f1c0085e125166659431e" target="_blank">{owner}</a> </h2>
             <br />
