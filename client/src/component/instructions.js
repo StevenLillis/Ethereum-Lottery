@@ -59,8 +59,8 @@ const Instruction = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#8FC1E3', color: '#000' }}
-                iconStyle={{ background: '#8FC1E3', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#000' }}
+                iconStyle={{ background: '#86bfee', color: '#fff' }}
                 icon={<MdNavigateNext />}
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Enter Limit</h3>
@@ -70,8 +70,8 @@ const Instruction = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#8FC1E3', color: '#000' }}
-                iconStyle={{ background: '#8FC1E3', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#000' }}
+                iconStyle={{ background: '#86bfee', color: '#fff' }}
                 icon={<MdNavigateBefore />}
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Selecting A Winner</h3>
@@ -81,8 +81,8 @@ const Instruction = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#8FC1E3', color: '#000' }}
-                iconStyle={{ background: '#8FC1E3', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#000' }}
+                iconStyle={{ background: '#86bfee', color: '#fff' }}
                 icon={<MdNavigateNext />}
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Winner Selected</h3>
@@ -92,8 +92,8 @@ const Instruction = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#8FC1E3', color: '#000' }}
-                iconStyle={{ background: '#8FC1E3', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#000' }}
+                iconStyle={{ background: '#86bfee', color: '#fff' }}
                 icon={<MdNavigateBefore />}
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Lottery Reset</h3>
@@ -103,8 +103,8 @@ const Instruction = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#8FC1E3', color: '#000' }}
-                iconStyle={{ background: '#8FC1E3', color: '#fff' }}
+                contentStyle={{ background: '#86bfee', color: '#000' }}
+                iconStyle={{ background: '#86bfee', color: '#fff' }}
                 icon={<MdNavigateNext />}
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Best Of Luck</h3>
