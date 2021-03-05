@@ -2,6 +2,7 @@ import React from 'react';
 import '../index.css';
 import Wheel from '../assets/wheel.svg';
 import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Spinner } from 'reactstrap';
 
 // Enter Card Component
 
@@ -34,7 +35,7 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight"
                             disabled
                         >
-                            Entering...
+                            <Spinner color="dark" />  Entering...
                         </button>{' '}
                         </div>
                             ) : (

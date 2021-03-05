@@ -2,9 +2,9 @@ import React from 'react';
 import '../index.css';
 import Ethereum from '../assets/ethereum.svg';
 import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Spinner } from 'reactstrap';
 
 //Manager Component
-
 const Manage = ({loading, pickWinner}) => {
     return (
         <div>
@@ -27,7 +27,7 @@ const Manage = ({loading, pickWinner}) => {
                                     className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight "
                                     disabled
                                 >
-                                    Picking...
+                                     <Spinner color="dark" />  Picking...
                                 </button>{' '}
                             </div> ) : (
                                 <button
