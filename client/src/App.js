@@ -38,7 +38,7 @@ class App extends Component {
       if(ethaddress.length == 0) { 
         ethaddress.push("0x1234567891234567891234567891234567891234");
         this.setState({
-          errorMessage: 'Error: Please sign in through Metamask'
+          errorMessage: 'Please sign in through Metamask'
         });
       }
       const ethbalance = await web3.eth.getBalance(ethaddress.toString(), function(err, result) {
