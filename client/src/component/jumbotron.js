@@ -31,7 +31,7 @@ const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
                             Current Account: {ethaddress}
                         </CardBody>
                         <CardBody>
-                            Current Account Balance: {parseFloat(web3.utils.fromWei(ethbalance, "ether")).toFixed(2)} Ether
+                            Current Account Balance: {parseFloat(web3.utils.fromWei(ethbalance, "ether")).toFixed(3)} Ether
                         </CardBody>
                     </Card>
                 </UncontrolledCollapse>
