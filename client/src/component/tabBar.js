@@ -37,6 +37,15 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
             How To Play
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
+            className="navlink-style"
+          >
+            Admin
+          </NavLink>
+        </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
         <br />
@@ -51,7 +60,16 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
                />
             </Col>
           </Container>
-          <Container>
+          <br />
+          <br />
+        </TabPane>
+        <TabPane tabId="2">
+          <Instruction />
+          <br />
+          <br />
+        </TabPane>
+        <TabPane tabId="3">
+        <Container>
             <Col>
               <Manage 
               loading={loadingPick}
@@ -59,11 +77,6 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
               />
             </Col>
           </Container>
-          <br />
-          <br />
-        </TabPane>
-        <TabPane tabId="2">
-          <Instruction />
           <br />
           <br />
         </TabPane>

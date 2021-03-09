@@ -63,8 +63,8 @@ class App extends Component {
       });
   
       try {
-        if (parseFloat(this.state.value) < 0.01) {
-          throw Error('Please enter a greater than the specified minimum (0.01 Ether)');
+        if (parseFloat(this.state.value) != 0.01) {
+          throw Error('Please enter the speciifed amount (0.01 Ether)');
         }
   
         const accounts = await web3.eth.getAccounts();
@@ -73,7 +73,7 @@ class App extends Component {
           from: accounts[0],
           value: web3.utils.toWei(this.state.value, 'ether')
         });
-  
+
         this.setState({
           successMessage: "Cheers! You've been successfully entered into the lottery",
           loadingEnter: false,

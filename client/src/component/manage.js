@@ -18,8 +18,8 @@ const Manage = ({loading, pickWinner}) => {
                 </div>
                 &emsp;
                 <CardBody>
-                    <CardText tag="h4">This Section Is Specific To The Manager Of This Lottery.</CardText>
-                    <CardText tag="h4">Any Individual Other Then The Manager Would Fail To Pick.</CardText>
+                    <CardText tag="h4">This section is specific to the manager of this Lottery.</CardText>
+                    <CardText tag="h4">Any individual other then the manager would fail to pick a winner.</CardText>
                     {/* Conditional Rendering Based on the value of the loading prop */}
                         {loading ? (
                             <div>

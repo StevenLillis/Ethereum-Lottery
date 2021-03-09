@@ -18,7 +18,7 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                     <img width="10%" src={Wheel} alt="Card image cap" />
                 </div>
                 <CardBody>
-                    <CardText tag="h4">Amount of Ether (Minimum 0.01 Ether)</CardText>
+                    <CardText tag="h4">Amount of Ether (0.01 Ether)</CardText>
                     &emsp;
                     <div className="md-form col-md-6 offset-md-3">
                         <input
