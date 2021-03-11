@@ -64,3 +64,17 @@ You can now view lottery-react in the browser.
 Note that the development build is not optimized.
 To create a production build, use npm run build.
 ```
+
+### Metamask
+Please ensure that you have [Metamask](https://metamask.io/download) installed.  
+
+The Lottery DApp operates and runs over the Rinekby Test Network.  You will need to switch to the Rinekby Network to use the Lottery. 
+
+Test Ether is available [here](https://faucet.rinkeby.io/)
+
+> You will be required to create a social media post that contains your account address.  Please copy the URL of the social media post, and select the amount of test Ether you require.  You will be required to wait a certain amount of time (Depending on the option you select) before requesting test Ether from this facuet again.  DO NOT request Test Ether again during this delay period as you may be barred from requesting for a longer time.
+
+### Browser 
+
+This Lottery has been run and tested on Google Chrome.  Please ensure that you are also running the Lottery on Google Chrome to avoid display issues. 
+
