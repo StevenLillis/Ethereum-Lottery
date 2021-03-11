@@ -10,8 +10,8 @@ const Manage = ({loading, pickWinner}) => {
         <div>
             <Card className="background-shadow">
                 <CardBody>
-                    <CardTitle tag="h1">Manage The Lottery</CardTitle>
-                    <CardSubtitle tag="h3" className="mb-2 text-muted">Manager Section Only</CardSubtitle>
+                    <CardTitle tag="h1">Manage the lottery</CardTitle>
+                    <CardSubtitle tag="h3" className="mb-2 text-muted">Manager section only</CardSubtitle>
                 </CardBody>
                 <div style={{ textAlign: 'center' }}>
                     <img width="10%" src={Ethereum} alt="Card image cap" />
@@ -34,7 +34,7 @@ const Manage = ({loading, pickWinner}) => {
                                     onClick={pickWinner}
                                     className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight "
                                 >
-                                    Pick a Winner!
+                                    Pick a Winner
                                 </button>
                                     )}
                 </CardBody>

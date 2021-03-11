@@ -43,7 +43,7 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
             onClick={() => { toggle('3'); }}
             className="navlink-style"
           >
-            Admin
+            Draw Lottery
           </NavLink>
         </NavItem>
       </Nav>

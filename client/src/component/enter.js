@@ -11,14 +11,14 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
         <div>
             <Card className="background-shadow">
                 <CardBody>
-                    <CardTitle tag="h1">Enter The Ethereum Lottery</CardTitle>
-                    <CardSubtitle tag="h3" className="mb-2 text-muted">Want To Try Your Luck?</CardSubtitle>
+                    <CardTitle tag="h1">Enter the ethereum lottery</CardTitle>
+                    <CardSubtitle tag="h3" className="mb-2 text-muted">Want to try your luck?</CardSubtitle>
                 </CardBody>
                 <div style={{ textAlign: 'center' }}>
                     <img width="10%" src={Wheel} alt="Card image cap" />
                 </div>
                 <CardBody>
-                    <CardText tag="h4">Amount of Ether (0.01 Ether)</CardText>
+                    <CardText tag="h4">Amount of ether (0.01 Ether)</CardText>
                     &emsp;
                     <div className="md-form col-md-6 offset-md-3">
                         <input
@@ -43,7 +43,7 @@ const Enter = ({loading, onSubmit, value, onChange }) => {
                             onClick={onSubmit}
                             className="btn btn-lg btn-primary mt-4 animated fadeIn button-weight"
                             >
-                            Enter the Lottery!
+                            Enter the Lottery
                             </button>
                         )}
                     </div>
