@@ -114,7 +114,7 @@ const Instruction = () => {
             >
                 <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Best Of Luck</h3>
                 <p>
-                    Gamble Aware, be safe, <br /> <u><a href="https://www.begambleaware.org/" target="_blank"> When the fun stops. Stop.</a></u> <br /> Please Gamble within your limits!
+                    Gamble Aware, be safe, <br /><a href="https://www.begambleaware.org/" target="_blank"> When the fun stops. Stop.</a> <br /> Please Gamble within your limits!
                 </p>
             </VerticalTimelineElement>
         </VerticalTimeline>
