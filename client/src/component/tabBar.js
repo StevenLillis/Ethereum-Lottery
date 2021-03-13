@@ -6,6 +6,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Container, Col } from 'reac
 import Instruction from './instructions.js'
 import Manage from './manage.js';
 import Enter from './enter.js';
+import Questions from './FAQ.js'
 
 //TabBar Component - Incorporates Components: Instruction, Manage & Enter
 
@@ -46,6 +47,15 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
             Draw Lottery
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '4' })}
+            onClick={() => { toggle('4'); }}
+            className="navlink-style"
+          >
+            FAQ
+          </NavLink>
+        </NavItem>
       </Nav>
       <TabContent activeTab={activeTab}>
         <br />
@@ -77,6 +87,16 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
               />
             </Col>
           </Container>
+          <br />
+          <br />
+        </TabPane>
+        <TabPane tabId="4">
+        <Container>
+            <Col>
+              <Questions />
+            </Col>
+          </Container>
+          <br />
           <br />
           <br />
         </TabPane>

@@ -2,11 +2,9 @@ import React, {useState} from 'react';
 import '../index.css';
 import 'react-vertical-timeline-component/style.min.css';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 import { GrCircleInformation } from "react-icons/gr";
 import { FaEthereum } from "react-icons/fa";
-import { FiCheckSquare } from "react-icons/fi";
 import { GiPodiumWinner, GiCardPickup, GiTakeMyMoney } from "react-icons/gi";
 import { GrPowerReset } from "react-icons/gr";
 import { FaThumbsUp } from "react-icons/fa";
@@ -117,7 +115,7 @@ const Instruction = () => {
                     Gamble Aware, be safe, <br /><a href="https://www.begambleaware.org/" target="_blank"> When the fun stops. Stop.</a> <br /> Please Gamble within your limits!
                 </p>
             </VerticalTimelineElement>
-        </VerticalTimeline>
+        </VerticalTimeline>        
     )
 }
 
