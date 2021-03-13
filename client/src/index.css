@@ -64,6 +64,7 @@ h2 {
 .weight { 
   font-weight: bold !important;
   font-style: initial !important;
+  font-variant: all-petite-caps !important;
 }
 
 /* Footer  */

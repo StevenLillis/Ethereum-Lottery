@@ -7,115 +7,201 @@ import { GrCircleInformation } from "react-icons/gr";
 import { FaEthereum } from "react-icons/fa";
 import { GiPodiumWinner, GiCardPickup, GiTakeMyMoney } from "react-icons/gi";
 import { GrPowerReset } from "react-icons/gr";
-import { FaThumbsUp } from "react-icons/fa";
+import { RiArrowDropRightLine } from "react-icons/ri";
 import { MdNetworkCheck } from "react-icons/md";
 import { RiAccountPinCircleFill } from "react-icons/ri";
 import { AiOutlineStop } from "react-icons/ai";
+import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 
 //Instruction Component
 
 const Instruction = () => {
 
-    const [popoverOpen, setPopoverOpen] = useState(false);
+    return (      
+        <Timeline lineColor={'#86bfee'}>
+  <TimelineItem
+    key="001"
+    dateText={<RiAccountPinCircleFill />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+        background: '#fff',
+        padding: '20px',
+        borderRadius: '8px',
+        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)'
+      }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Installing Metamask</h2>
+    <br />
+    <p>
+        <ul> 
+            <li className="weight">
+            You must have <a href="https://metamask.io/download.html" target="_blank">MetaMask </a>  
+            installed with an account created &nbsp;
+            </li>
+            <br />
+            <li className="weight">
+                The Metamask account must have a minimum balance of 0.01 Ether
+            </li>
+            <br />
+            <li className="weight">
+                The Metamask account must have enough ether to cover the gas fee
+            </li>
+        </ul>
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="002"
+    dateText={<MdNetworkCheck />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Metamask Network</h2>
+    <br />
+    <p>
+        <ul>
+            <li className="weight">
+            Please ensure that you are connected to the <a href="https://www.rinkeby.io/#stats" target="_blank"> rinkeby test network </a>  
+            </li>
+            <br />
+            <li className="weight">
+            Connecting to any network other than Rinekby will result in a error being thrown
+            </li>
+        </ul>
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="003"
+    dateText={<GiTakeMyMoney />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+      className: 'weight'
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Entering The Lottery</h2>
+    <br />
+    <p>
+        <ul>
+            <li className="weight">
+            Participate by entering deposting 0.01 ether from  one of your accounts
+            </li>
+            <br />
+            <li className="weight">
+                Please have enough money in your account to cover the gas fees also
+            </li>
+        </ul> 
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="004"
+    dateText={<AiOutlineStop />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Lottery Entry Limit</h2>
+    <br />
+    <p>
+        <ul>
+            <li className="weight">
+            There is no limit, players may enter the lottery as many times as they wish
+            </li>
+            <br />
+            <li className="weight">
+            The more times you enter, the better chance you have to win
+            </li>
+        </ul>
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="005"
+    dateText={<GiCardPickup />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Selecting The Winner</h2>
+    <br />
+    <p>
+        <ul> 
+            <li className="weight">
+            Once a suitable number of people have entered, the lottery will be drawn
+            </li>
+            <br />
+            <li className="weight">
+            This can only be done by the owner of the lottery dapp
+            </li>
+        </ul>
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="006"
+    dateText={<GiPodiumWinner />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Winner Selected</h2>
+    <br />
+    <p>
+        <ul>
+            <li className="weight">
+            Once the lottery has been drawn, the winner will recieve the entire lottery Jackpot.
+            </li>
+            <br />
+            <li className="weight">
+            Winning amount may be reduced by gas fee as a result of the transaction
+            </li>
+        </ul> 
+    </p>
+  </TimelineItem>
+  <TimelineItem
+    key="006"
+    dateText={<GiPodiumWinner />}
+    dateInnerStyle={{ background: '#86bfee', color: '#000' }}
+    bodyContainerStyle={{
+      background: '#fff',
+      padding: '20px',
+      borderRadius: '8px',
+      boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+    }}
+  >
+    <h2 className="weight"><RiArrowDropRightLine />Lottery Reset</h2>
+    <br />
+    <p>
+        <ul>
+            <li className="weight">
+            Gamble Aware and be safe <br /><a href="https://www.begambleaware.org/" target="_blank"> when the fun stops, stop.</a> 
+            </li>
+            <br />
+            <li className="weight">
+            Please only gamble within your limits
+            </li>
+        </ul> 
+    </p>
+  </TimelineItem>
+</Timeline>
 
-    const toggle = () => setPopoverOpen(!popoverOpen);
-
-    return (
-        <VerticalTimeline>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<RiAccountPinCircleFill />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Metamask</h3>
-                <p>
-                    Please ensure that you have <a href="https://metamask.io/download.html" target="_blank">MetaMask</a> installed and have an account created, with a minimum balance of 0.01 Ether&nbsp;   
-                        <GrCircleInformation id="Popover1" type="button"/>
-                    <Popover placement="bottom" isOpen={popoverOpen} target="Popover1" toggle={toggle}>
-                    <PopoverHeader tag="p">Metamask</PopoverHeader>
-                        <PopoverBody tag="p">Metamask can be installed by following the link provided.  Please be sure to remember your seed phrase as this is important.  Be sure that you are logged in when attempting to enter the Lottery. </PopoverBody>
-                    </Popover>
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<MdNetworkCheck />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> MetaMask Network</h3>
-                <p>
-                    Please ensure that you are connected to the <a href="https://www.rinkeby.io/#stats" target="_blank"> Rinkeby Test Network</a>  The Lottery DApp will only connect to the Rinkeby Network
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<GiTakeMyMoney />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Entering The Lottery</h3>
-                <p>
-                    You can participate in the Lottery by entering deposting 0.01 Ether from any one of your Metamask accounts
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<AiOutlineStop />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Enter Limit</h3>
-                <p>
-                    There is no limit, players may enter the Lottery <br /> as many times as they wish <br /> The more times you enter, the better chance you have to win!
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<GiCardPickup />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Selecting A Winner</h3>
-                <p>
-                    Once a suitable number of people have entered, the Lottery will be drawn <br /> <u>This can only be done by <br />the Owner of the Lottery DApp</u>
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<GiPodiumWinner />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Winner Selected</h3>
-                <p>
-                    Once the Lottery has been drawn, the winner will recieve the entire Lottery Jackpot.  <br />Time to Celebrate!
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<GrPowerReset />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Lottery Reset</h3>
-                <p>
-                    Once the winner has been selected, <br />  a new Lottery will begin <br /> allowing players to enter again.    
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#86bfee', color: '#000' }}
-                iconStyle={{ background: '#86bfee', color: '#000' }}
-                icon={<FaThumbsUp />}
-            >
-                <h3 className="vertical-timeline-element-title weight"> <FaEthereum /> Best Of Luck</h3>
-                <p>
-                    Gamble Aware, be safe, <br /><a href="https://www.begambleaware.org/" target="_blank"> When the fun stops. Stop.</a> <br /> Please Gamble within your limits!
-                </p>
-            </VerticalTimelineElement>
-        </VerticalTimeline>        
     )
 }
 
