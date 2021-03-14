@@ -1,15 +1,10 @@
 import React, {useState} from 'react';
 import '../index.css';
 import 'react-vertical-timeline-component/style.min.css';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
-import { GrCircleInformation } from "react-icons/gr";
-import { FaEthereum } from "react-icons/fa";
 import { GiPodiumWinner, GiCardPickup, GiTakeMyMoney } from "react-icons/gi";
-import { GrPowerReset } from "react-icons/gr";
-import { RiArrowDropRightLine } from "react-icons/ri";
+import { RiArrowDropRightLine, RiAccountPinCircleFill } from "react-icons/ri";
 import { MdNetworkCheck } from "react-icons/md";
-import { RiAccountPinCircleFill } from "react-icons/ri";
+import { GrPowerReset} from "react-icons/gr";
 import { AiOutlineStop } from "react-icons/ai";
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 
@@ -177,7 +172,7 @@ const Instruction = () => {
   </TimelineItem>
   <TimelineItem
     key="006"
-    dateText={<GiPodiumWinner />}
+    dateText={<GrPowerReset />}
     dateInnerStyle={{ background: '#86bfee', color: '#000' }}
     bodyContainerStyle={{
       background: '#fff',
@@ -201,7 +196,6 @@ const Instruction = () => {
     </p>
   </TimelineItem>
 </Timeline>
-
     )
 }
 

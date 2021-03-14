@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import '../index.css';
 import classnames from 'classnames';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Container, Col } from 'reactstrap';
+import { animations } from 'react-animation';
+import 'react-animation/dist/keyframes.css';
+
 
 import Instruction from './instructions.js'
 import Manage from './manage.js';
@@ -60,7 +63,7 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
       <TabContent activeTab={activeTab}>
         <br />
         <TabPane tabId="1">
-          <Container>
+          <Container style={{animation: animations.popIn}}>
             <Col>
               <Enter
               onSubmit={onSubmit}
@@ -79,7 +82,7 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
           <br />
         </TabPane>
         <TabPane tabId="3">
-        <Container>
+        <Container style={{animation: animations.popIn}}>
             <Col>
               <Manage 
               loading={loadingPick}
@@ -91,13 +94,11 @@ const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) =
           <br />
         </TabPane>
         <TabPane tabId="4">
-        <Container>
+        <Container style={{animation: animations.popIn}}>
             <Col>
               <Questions />
             </Col>
           </Container>
-          <br />
-          <br />
           <br />
         </TabPane>
       </TabContent>
