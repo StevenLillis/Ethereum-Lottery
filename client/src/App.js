@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Confetti from 'react-dom-confetti';
 import './App.css';
 
 import Jumbotron from './component/jumbotron.js';
@@ -21,7 +22,7 @@ class App extends Component {
     loadingPick: false,
     errorMessage: '',
     successMessage: '',
-    otherNetwork: null,
+    otherNetwork: null
   };
 
   async componentDidMount() {
@@ -174,10 +175,11 @@ class App extends Component {
     if (this.state.successMessage) {
       successAlert = (
         <div
-          className="alert alert-success mt-4 z-depth-2 clearfix mb-5 text-center animated fadeIn"
+          className="alert alert-success mt-4 z-depth-2 text-center animated fadeIn"
           style={{ fontSize: '20px', fontWeight: 'bold' }}
           role="alert"
         >
+          <strong>Success: </strong>
           {this.state.successMessage}
         </div>
       );

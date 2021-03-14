@@ -47,6 +47,8 @@ const Questions = () => {
             Unfortunately not.  However, you can see who has won based on the transctions found <a href="https://rinkeby.etherscan.io/address/0x01f7b3f5ef19d1b2f87f1c0085e125166659431e" target="_blank">here</a> 
             </ListGroupItemText>
           </ListGroupItem>
+          <br/>
+          <br />
         </ListGroup>
       );
 }
