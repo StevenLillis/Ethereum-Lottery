@@ -171,7 +171,7 @@ const Instruction = () => {
     </p>
   </TimelineItem>
   <TimelineItem
-    key="006"
+    key="007"
     dateText={<GrPowerReset />}
     dateInnerStyle={{ background: '#86bfee', color: '#000' }}
     bodyContainerStyle={{

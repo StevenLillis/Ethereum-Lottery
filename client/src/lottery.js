@@ -1,5 +1,7 @@
 import web3 from './web3';
 
+//Lottery Contract ABI and Address on Etherscan
+
 const address = '0x01f7B3F5EF19d1B2f87F1C0085e125166659431E'
 const abi = [
         {

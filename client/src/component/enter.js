@@ -4,7 +4,7 @@ import Wheel from '../assets/wheel.svg';
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import { Spinner } from 'reactstrap';
 
-// Enter Card Component
+// Enter Card Component - Allowing participents to enter the Lottery
 
 const Enter = ({loading, onSubmit, value, onChange }) => {
     return (

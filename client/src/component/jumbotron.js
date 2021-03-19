@@ -5,7 +5,7 @@ import { Jumbotron, Button } from 'reactstrap';
 import { UncontrolledCollapse, CardBody, Card } from 'reactstrap';
 import web3 from '../web3.js';
 
-//Jumbotron Component
+//Jumbotron Component 
 
 const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
 
@@ -14,6 +14,7 @@ const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
             <h1 className="display-3">Welcome To The Ethereum Lottery</h1>
             <img src={Logo} alt="My logo" className="rotate" />
             <br />
+            {/* Displaying Lottery Information */}
             <h2 className="lead">This Lottery is run and managed by <a href="https://rinkeby.etherscan.io/address/0x01f7b3f5ef19d1b2f87f1c0085e125166659431e" target="_blank">{owner}</a> </h2>
             <br />
             <h2 className="lead">Currently, we have {players.length} entries, completing to win {web3.utils.fromWei(balance, 'ether')} Ether!</h2>
@@ -27,6 +28,7 @@ const ReactJumbotron = ({owner, players, balance, ethaddress, ethbalance}) => {
                         </Button>
                 <UncontrolledCollapse toggler="#toggler">
                     <Card className="background-colour">
+                        {/* Account Information from Metamask */}
                         <CardBody>
                             Current Account: {ethaddress}
                         </CardBody>

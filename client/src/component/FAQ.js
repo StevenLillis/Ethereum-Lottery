@@ -1,6 +1,8 @@
 import React from 'react';
 import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
 
+//Freq Asked Question Component
+
 const Questions = () => { 
 
     return (

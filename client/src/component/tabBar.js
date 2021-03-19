@@ -11,7 +11,7 @@ import Manage from './manage.js';
 import Enter from './enter.js';
 import Questions from './FAQ.js'
 
-//TabBar Component - Incorporates Components: Instruction, Manage & Enter
+//TabBar Component - Incorporates Components: Instruction, Manage, Enter & FAQ
 
 const TabBar = ({onSubmit, value, loading, onChange, loadingPick, pickWinner}) => {
   const [activeTab, setActiveTab] = useState('1');

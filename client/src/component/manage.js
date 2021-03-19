@@ -4,7 +4,10 @@ import Ethereum from '../assets/ethereum.svg';
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import { Spinner } from 'reactstrap';
 
-//Manager Component
+//Manager Component - For Owner of the Lottery to pick winner
+
+//Only accessable by the owner of the lottery!
+
 const Manage = ({loading, pickWinner}) => {
     return (
         <div>

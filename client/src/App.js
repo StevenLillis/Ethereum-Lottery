@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Confetti from 'react-dom-confetti';
 import './App.css';
 
 import Jumbotron from './component/jumbotron.js';
@@ -10,6 +9,8 @@ import lottery from './lottery.js';
 import web3 from './web3';
 
 class App extends Component {
+
+  // State Management
 
   state = {
     owner: '',
@@ -32,9 +33,12 @@ class App extends Component {
         this.setState({ otherNetwork: network });
       }
 
+      //Lottery Contract Calls
       const owner = await lottery.methods.owner().call();
       const players = await lottery.methods.getPlayers().call();
       const balance = await web3.eth.getBalance(lottery.options.address);
+
+      //Metamask Account Address and Account Balance
       const ethaddress = await web3.eth.getAccounts();
       if(ethaddress.length == 0) { 
         ethaddress.push("0x1234567891234567891234567891234567891234");
@@ -42,6 +46,7 @@ class App extends Component {
           errorMessage: 'Please sign in through Metamask'
         });
       }
+      //Preventing Console Log Error (Dummy account Put in place, address is a invalid Metamask account with 0 Ether balance)
       const ethbalance = await web3.eth.getBalance(ethaddress.toString(), function(err, result) {
         if (err) {
           console.log(err)
@@ -56,13 +61,15 @@ class App extends Component {
     //Sumbit Function - Allows participents to enter into the Lottery
     onSubmit = async event => {
       event.preventDefault();
-  
+      
+      //Updating State
       this.setState({
         errorMessage: '',
         successMessage: '',
         loadingEnter: true
       });
   
+      //Validate User Input
       try {
         if (parseFloat(this.state.value) != 0.01) {
           throw Error('Please enter the speciifed amount (0.01 Ether)');
@@ -70,11 +77,13 @@ class App extends Component {
   
         const accounts = await web3.eth.getAccounts();
   
+        //Call Lottery.sol Join Function
         await lottery.methods.join().send({
           from: accounts[0],
           value: web3.utils.toWei(this.state.value, 'ether')
         });
 
+        //Update State
         this.setState({
           successMessage: "Cheers! You've been successfully entered into the lottery",
           loadingEnter: false,
@@ -107,6 +116,7 @@ class App extends Component {
       try {
         const accounts = await web3.eth.getAccounts();
   
+        //Validate Metamask account being used - is the account address equal to the onwers address?
         if (accounts[0] !== this.state.owner) {
           throw Error(
             "You are NOT the manager of this lottery and therefore can't pick a winner"
@@ -140,6 +150,7 @@ class App extends Component {
     
   render() {
 
+    //Network error message
     let networkError = this.state.otherNetwork ? (
       <div
         className="alert alert-danger z-depth-2 text-center animated fadeIn"
@@ -159,6 +170,7 @@ class App extends Component {
 
     let errorAlert, successAlert;
 
+    //General Error Messaging
     if (this.state.errorMessage) {
       errorAlert = (
         <div
@@ -172,6 +184,7 @@ class App extends Component {
       );
     }
 
+    //Success Messaging
     if (this.state.successMessage) {
       successAlert = (
         <div
