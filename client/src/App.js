@@ -46,6 +46,7 @@ class App extends Component {
           errorMessage: 'Please sign in through Metamask'
         });
       }
+
       //Preventing Console Log Error (Dummy account Put in place, address is a invalid Metamask account with 0 Ether balance)
       const ethbalance = await web3.eth.getBalance(ethaddress.toString(), function(err, result) {
         if (err) {
