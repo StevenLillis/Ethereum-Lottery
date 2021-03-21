@@ -10,6 +10,7 @@ before(async () => {
 
 contract('Lottery Tests', function(accounts){
     //Test 1
+    
     it('is the owner_address equal to the deployer_address', async () => {
         var owner_address = await Lottery.owner.call(); 
         var deployer_address = accounts[0];
